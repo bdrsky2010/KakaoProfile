@@ -29,8 +29,12 @@ class ViewController: UIViewController {
         backgroundImageConfig()
         topButtonConfig()
         profileImageConfig()
-        profileNameLabelConfig()
-        descriptionLabelConfig()
+        labelConfig(self.profileNameLabel, 
+                    text: "스티치",
+                    font: .boldSystemFont(ofSize: 20))
+        labelConfig(self.descriptionLabel, 
+                    text: "노는 게 제일 좋아.",
+                    font: .systemFont(ofSize: 15))
         dividerConfig()
         bottomButtonConfig()
         bottomLabelConfig()
@@ -61,20 +65,12 @@ class ViewController: UIViewController {
         self.profileImageView.layer.cornerRadius = 50
     }
     
-    private func profileNameLabelConfig() {
-        self.profileNameLabel.text = "Stitch"
-        self.profileNameLabel.textColor = .white
-        self.profileNameLabel.numberOfLines = 1
-        self.profileNameLabel.textAlignment = .center
-        self.profileNameLabel.font = .boldSystemFont(ofSize: 20)
-    }
-    
-    private func descriptionLabelConfig() {
-        self.descriptionLabel.text = "노는 게 제일 좋아."
-        self.descriptionLabel.textColor = .white
-        self.descriptionLabel.numberOfLines = 2
-        self.descriptionLabel.textAlignment = .center
-        self.descriptionLabel.font = .systemFont(ofSize: 15)
+    private func labelConfig(_ label: UILabel, text: String, font: UIFont) {
+        label.text = text
+        label.textColor = .white
+        label.numberOfLines = 1
+        label.textAlignment = .center
+        label.font = font
     }
     
     private func dividerConfig() {
