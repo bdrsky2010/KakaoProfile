@@ -69,16 +69,16 @@ class ViewController: UIViewController {
         self.profileNameLabel.font = .boldSystemFont(ofSize: 20)
     }
     
-    private func dividerConfig() {
-        self.dividerView.backgroundColor = .darkGray
-    }
-    
     private func descriptionLabelConfig() {
         self.descriptionLabel.text = "노는 게 제일 좋아."
         self.descriptionLabel.textColor = .white
         self.descriptionLabel.numberOfLines = 2
         self.descriptionLabel.textAlignment = .center
         self.descriptionLabel.font = .systemFont(ofSize: 15)
+    }
+    
+    private func dividerConfig() {
+        self.dividerView.backgroundColor = .darkGray
     }
     
     private func bottomButtonConfig() {
